@@ -1,23 +1,17 @@
-window.onload = function() {
-    var favicon = document.getElementById("favicon");
-    setInterval(changeFavicon, 200);
-
-    function changeFavicon() {
-        favicon.href = "images/favicon2.png";
-    }
+window.onload = () => {
+    setTimeout(() => document.getElementById("favicon").href = "images/favicon2.png", 200);
 };
 
 function changeText(id, copy, text) {
-    var element = document.getElementById(id);
-    var originalText = element.innerHTML;
+    const element = document.getElementById(id);
+    const originalText = element.innerHTML;
 
     element.innerHTML = copy;
 
-    navigator.clipboard.writeText(copy).then(function() {
-        alert(text + " byl zkopírován do schránky!");
-        element.innerHTML = originalText;
-    }).catch(function(error) {
-        alert("Došlo k chybě při kopírování: " + error);
-        element.innerHTML = originalText;
-    });
+    setTimeout(() => {
+        navigator.clipboard.writeText(copy)
+            .then(() => alert(`${text} byl zkopírován do schránky!`))
+            .catch((error) => alert(`Došlo k chybě při kopírování: ${error}`))
+            .finally(() => element.innerHTML = originalText);
+    }, 100);
 }
