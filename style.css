@@ -1,16 +1,33 @@
 body {
     text-align: center;
     font-family: 'Courier New', monospace;
+    color: black;
 }
 
 .up {
     font-size: 36px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
 }
-
 .mid {
-    font-size: 24px;
+    font-size: 26px;
+    position: fixed;
+    width: 100%;
+    top: 130px;
+}
+.down {
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
 }
 
-a, a:visited, a:hover, a:active {
+a, a:visited, a:active {
     color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: black;
 }
