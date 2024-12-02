@@ -7,20 +7,23 @@ window.onload = function() {
     }
 };
 
+let textChanged = false;
 function changeText() {
-    document.getElementById("text").innerHTML = "kiripolskypavel@gmail.com";
-    setInterval(copyToClipboard, 1000);
-    setInterval(changeTextBack, 1000);
+    if (!textChanged) {
+        textChanged = true;
+        document.getElementById("text").innerHTML = "kiripolskypavel@gmail.com";
+
+        navigator.clipboard.writeText("kiripolskypavel@gmail.com").then(function() {
+            alert("Email byl zkopírován do schránky!");
+        }).catch(function(error) {
+            alert("Došlo k chybě při kopírování: " + error);
+        });
+
+        setInterval(changeTextBack, 1000);
+    }
 }
 
 function changeTextBack() {
     document.getElementById("text").innerHTML = "Email";
-}
-
-function copyToClipboard() {
-    navigator.clipboard.writeText("kiripolskypavel@gmail.com").then(function() {
-        alert("Email byl zkopírován do schránky!");
-    }).catch(function(error) {
-        alert("Došlo k chybě při kopírování: " + error);
-    });
+    textChanged = false;
 }
