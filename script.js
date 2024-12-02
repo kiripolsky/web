@@ -8,12 +8,16 @@ window.onload = function() {
 };
 
 function changeText(id, copy, text) {
-    document.getElementById(id).innerHTML = copy;
+    var element = document.getElementById(id);
+    var originalText = element.innerHTML;
+
+    element.innerHTML = copy;
+
     navigator.clipboard.writeText(copy).then(function() {
         alert(text + " byl zkopírován do schránky!");
-        document.getElementById(id).innerHTML = id;
+        element.innerHTML = originalText;
     }).catch(function(error) {
         alert("Došlo k chybě při kopírování: " + error);
-        document.getElementById(id).innerHTML = id;
+        element.innerHTML = originalText;
     });
 }
