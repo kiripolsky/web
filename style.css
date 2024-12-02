@@ -28,8 +28,9 @@ body {
     align-items: center;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1), 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
     width: 25vw;
+    min-width: 250px;
     height: 70vh;
-    overflow-y: auto;
+    overflow-y: visible;
     scrollbar-width: none;
 }
 
