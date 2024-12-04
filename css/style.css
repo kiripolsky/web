@@ -12,8 +12,9 @@ body {
     font-family: 'Monaco', monospace;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     word-break: break-word;
     margin: 0;
 }
@@ -24,6 +25,7 @@ body {
 .mid {
     font-size: 26px;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex: 1;
 }
@@ -35,14 +37,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1), 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    min-width: 250px;
+    width: 50vh;
     height: 500px;
 }
 
 .image {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex: 1;
 }
