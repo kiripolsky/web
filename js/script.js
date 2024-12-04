@@ -1,5 +1,5 @@
 window.onload = () => {
-    setTimeout(() => document.getElementById("favicon").href = "images/favicon2.png", 200);
+    setTimeout(() => document.getElementById("favicon").href = "../image/favicon2.png", 200);
 };
 
 function changeText(id, copy, text) {
