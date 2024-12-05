@@ -1,0 +1,24 @@
+.mid {
+    align-items: end;
+}
+.mid > div {
+    height: 300px;
+}
+
+.back {
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.back > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1), 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
+    width: 25vw;
+    min-width: 250px;
+    height: 100px;
+}
