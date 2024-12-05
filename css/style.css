@@ -10,13 +10,12 @@ a:hover {
 body {
     text-align: center;
     font-family: 'Monaco', monospace;
+    word-break: break-word;
+    height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    word-break: break-word;
-    margin: 0;
 }
 
 .up {
@@ -25,7 +24,6 @@ body {
 .mid {
     font-size: 26px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex: 1;
 }
@@ -37,7 +35,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1), 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
     width: 25vw;
     min-width: 250px;
