@@ -1,4 +1,5 @@
 window.onload = () => {
+    document.getElementById("favicon").href = "../png/favicon1.png";
     setTimeout(() => document.getElementById("favicon").href = "../png/favicon2.png", 200);
 };
 
